@@ -1,0 +1,39 @@
+{
+  "name": "workradar",
+  "version": "1.0.0",
+  "private": true,
+  "description": "WorkRadar: an AI command center that shows product managers their top work, what happened today, what needs attention and who is blocked across Slack, Jira, GitHub and Email.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.18"
+  },
+  "scripts": {
+    "dev": "vite",
+    "dev:api": "node server/index.mjs",
+    "build": "tsc --noEmit && vite build",
+    "build:single": "vite build --mode single",
+    "preview": "vite preview",
+    "start": "npm run build && node server/index.mjs",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "figma:export": "node scripts/figma/export.mjs"
+  },
+  "dependencies": {
+    "@fontsource/bricolage-grotesque": "5.1.1",
+    "@fontsource/ibm-plex-mono": "5.1.1",
+    "@fontsource/ibm-plex-sans": "5.1.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.12",
+    "@types/react-dom": "18.3.1",
+    "@vitejs/plugin-react": "4.3.4",
+    "playwright": "1.56.0",
+    "typescript": "5.6.3",
+    "vite": "6.0.7",
+    "vite-plugin-singlefile": "2.1.0",
+    "vitest": "3.0.5"
+  }
+}
